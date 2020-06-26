@@ -1,0 +1,12 @@
+{
+  "markdown.extension.toc.levels": "2..3",
+  "files.exclude": {
+    "node_modules/": true,
+    ".private/": false,
+    ".vscode/": false
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    ".test/coverage": true
+  }
+}

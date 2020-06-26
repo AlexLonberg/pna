@@ -1,0 +1,39 @@
+{
+  "name": "@lonberg/pna",
+  "version": "0.7.0",
+  "description": "Parse node arguments",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/_mocha ./.test/index.js",
+    "coverage": "c8 --exclude .test/**/*  --report-dir ./.test/coverage npm run test",
+    "coverage.report": "c8 report --exclude .test/**/*  --report-dir ./.test/coverage --reporter=html"
+  },
+  "author": "Alexander Lonberg <alexlonberg@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/AlexLonberg/pna.git",
+  "homepage": "https://github.com/AlexLonberg/pna",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "arguments",
+    "parser",
+    "node",
+    "process",
+    "javascript",
+    "server"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "exports": {
+    ".": "./index.js"
+  },
+  "devDependencies": {
+    "c8": "^7.2.0",
+    "eslint": "^7.3.1",
+    "mocha": "^8.0.1"
+  },
+  "type": "module",
+  "private": true
+}
