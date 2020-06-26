@@ -40,9 +40,13 @@ const pals = (alias, bool, ignoreCase) => {
     if (a) {
       a = a[1]
       bl.set(b, a)
-      entries.filter(([v, n]) => (
-        (a === n) ? (bl.set(v, a), false) : true)
-      )
+      for (let i = 0; i < entries.length; ++i) {
+        let [v, n] = entries[i]
+        if (a === n) {
+          bl.set(v, a)
+          entries.splice(i--, 1)
+        }
+      }
     } else if (isValid(b)) {
       bl.set(b, b)
     }
