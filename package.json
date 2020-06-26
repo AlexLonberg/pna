@@ -1,6 +1,6 @@
 {
   "name": "@lonberg/pna",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "description": "Parse node arguments",
   "scripts": {
     "test": "node node_modules/mocha/bin/_mocha ./.test/index.js",

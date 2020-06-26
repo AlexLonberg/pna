@@ -12,7 +12,7 @@
   - [Options.item:boolean](#optionsitemboolean)
   - [Options.uniq:boolean](#optionsuniqboolean)
   - [Options.bool:string[]](#optionsboolstring)
-- [npa(options?):function](#npaoptionsfunction)
+- [pna(options?):function](#pnaoptionsfunction)
 - [parser(argv?):{}](#parserargv)
   - [Arg.args:Array](#argargsarray)
   - [Arg.map:Map](#argmapmap)
@@ -226,7 +226,7 @@ const options = {
 
 // $ node app.js -c --watch file.json --dev main.json
 
-const arg = npa(options)()
+const arg = pna(options)()
 
 // Обратите внимание, аргументы идущие за булевым параметром,
 //   относятся к предшетствующему параметру
@@ -238,7 +238,7 @@ arg.get('-c')
 // => ["file.json", "main.json"]
 ```
 
-## npa(options?):function
+## pna(options?):function
 
 Подготавливает [опции](#options-) и возвращает функцю [парсера](#parserargv).
 
@@ -251,7 +251,7 @@ const parser = pna(options?)
 
 ```js
 // $ node app.js --watch
-const arg = npa({bool:['--watch']})()
+const arg = pna({bool:['--watch']})()
 arg.has('--watch')
 // => true
 ```
@@ -299,7 +299,7 @@ const options = {
 
 // $ node app.js -c --watch file.json --dev main.json
 
-const arg = npa(options)()
+const arg = pna(options)()
 
 Object.fromEntries(arg.args)
 // => { config:["file.json", "main.json"], watch:true, dev:true }
@@ -312,7 +312,7 @@ Object.fromEntries(arg.args)
 // Строка ниже содержит неименованный аргумент file.txt
 //  $ node app.js file.txt -c config.json
 
-const arg = npa()()
+const arg = pna()()
 // arg.args =>
 // [
 //   [ null, ["file.txt"] ],
@@ -327,7 +327,7 @@ const arg = npa()()
 
 ```js
 // $ node app.js -c foo
-const arg = npa()()
+const arg = pna()()
 
 // Для получения только массива аргументов, используйте метод Arg.get(p?),
 //   здесь это только для примера
@@ -342,7 +342,7 @@ const item = arg.args[i]
 
 ```js
 // $ node app.js -c
-const arg = npa()()
+const arg = pna()()
 
 // Даже если параметр не содержит аргументов, вернет истину
 arg.has('-c')
@@ -363,7 +363,7 @@ arg.has('-c')
 
 ```js
 // $ node app.js file.txt -c
-const arg = npa()()
+const arg = pna()()
 
 // Вернет неименованные параметры
 arg.get()
