@@ -135,8 +135,7 @@ const parse = (argv, alias, bool, ignoreCase, item, uniq) => {
  */
 export default (options) => {
   let { alias, ignoreCase, item, uniq, bool } = isObject(options) ? options : {}
-  let fl = (isObject(alias) ? 1 : ((alias = {}), 0)) | (isArray(bool) ? 1 : ((bool = []), 0))
-  let [als, bl, mdp] = fl
+  let [als, bl, mdp] = (isObject(alias) ? 1 : ((alias = {}), 0)) | (isArray(bool) ? 1 : ((bool = []), 0))
     ? pals(alias, bool, ignoreCase)
     : [new Map(), new Map(), (p) => (p || null)]
   /**
