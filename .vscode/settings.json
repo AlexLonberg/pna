@@ -1,0 +1,35 @@
+{
+  "markdown.extension.toc.levels": "2..3",
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    ".private": true,
+    ".tsbuildinfo": true,
+    ".vscode": true,
+    ".coverage": true,
+    "scripts": true,
+    "dist": true,
+    // files
+    ".gitignore": true,
+    "LICENSE.md": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "cSpell.words": [],
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "todo-tree.filtering.excludeGlobs": [
+    "**/.private",
+    "**/.git",
+    "**/node_modules",
+    "**/.tsbuildinfo",
+    "**/.vscode",
+    "**/.coverage",
+    "**/dist"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "jest.autoRun": {
+    "watch": false
+  }
+}
