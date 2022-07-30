@@ -1,6 +1,6 @@
 {
   "name": "@lonberg/pna",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Parse node arguments",
   "author": "Alexander Lonberg <alexlonberg@gmail.com>",
   "repository": {
