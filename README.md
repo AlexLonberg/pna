@@ -9,6 +9,7 @@
 
 - [Использование](#использование)
 - [Опции](#опции)
+- [Установка из github](#установка-из-github)
 
 ## Использование
 
@@ -90,3 +91,29 @@ type Options = {
   lowerCase?: boolean
 }
 ```
+
+Все доступные типы:
+
+```ts
+import {
+  type Group,
+  type Options,
+  type IReadonlySet,
+  type IReadonlyMap,
+  type IReadonlyMapString,
+  type IReadonlyMapList,
+  type IArguments,
+  parse,
+  split  
+} from '@lonberg/pna'
+```
+
+## Установка из github
+
+```
+    git clone https://github.com/AlexLonberg/pna.git
+    npm i ./pna
+```
+
+`npm i <local_dir>` установит зависимости и выполнить `npm run postinstall`.
+Локальная установка, в отличие от NPM, генерирует source map `--declarationMap` со ссылками на оригинальные `src/*.ts` файлы.

@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc --project tsconfig.build.json",
+    "postinstall": "tsc --project tsconfig.build.json --declarationMap",
     "prebuild:npm": "tsc --project tsconfig.build.json --outDir npm",
     "build:npm": "node ./npm.build.js"
   },

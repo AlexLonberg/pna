@@ -4,8 +4,9 @@
     "noEmit": false,
     "noEmitOnError": true,
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./dist"
     // "emitDeclarationOnly": true
+    // "declarationMap": true
   },
   "exclude": [
     "**/_*",
