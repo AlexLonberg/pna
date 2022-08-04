@@ -81,7 +81,6 @@ type Options = {
   // Значением будет массив всех элементов до следующего параметра.
   // Массивы могут объединяться, например '-a foo -- -a bar' -> [foo, bar]
   list?: Group
-
   // Игнорирование регистра символов параметров.
   // Это не влияет на значения следующие за параметрами.
   // Например параметр "-c foo", равносилен "-C foo",
@@ -111,8 +110,8 @@ import {
 ## Установка из github
 
 ```
-    git clone https://github.com/AlexLonberg/pna.git
-    npm i ./pna
+    git clone https://github.com/AlexLonberg/pna.git custom_dir_name
+    npm i ./custom_dir_name
 ```
 
 `npm i <local_dir>` установит зависимости и выполнить `npm run postinstall`.
